@@ -1,0 +1,16 @@
+[user]
+	name = binoy
+	email = binoy.c@media.net
+[diff]
+    tool = meld
+[difftool]
+    prompt = false
+[difftool "meld"]
+    cmd = meld "$LOCAL" "$REMOTE"
+[alias]
+    co = checkout
+    cob = checkout -b
+    ft = fetch
+	c = commit -m
+	p = push
+
