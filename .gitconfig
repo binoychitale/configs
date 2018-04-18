@@ -13,4 +13,4 @@
     ft = fetch
 	c = commit -m
 	p = push
-
+	st = status
