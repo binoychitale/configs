@@ -30,6 +30,9 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 nnoremap <C-h> <C-w>h
+nnoremap <C-b> "+p
+nnoremap <C-;> $a;
+
 nnoremap f "ay
 nnoremap F "ad
 nnoremap t "a
@@ -42,7 +45,6 @@ colorscheme one
 set background=dark
 " function to comment/uncomment n lines
 function! Comment(line1, line2)
- echo "here"
  	let l1 = a:line1
 	let l2 = a:line2
 	execute l1.','.l2.'s/^/\/\/'
@@ -50,9 +52,11 @@ endfunction
 :command! -nargs=+ Comm :call Comment(<f-args>)
 
 function! Ucomment(line1, line2)
- echo "here"
  	let l1 = a:line1
 	let l2 = a:line2
 	execute l1.','.l2.'s/\/\//'
 endfunction
 :command! -nargs=+ Ucomm :call Ucomment(<f-args>)
+
+
+:command! Sout :normal i System.out.println(

@@ -14,3 +14,5 @@
 	c = commit -m
 	p = push
 	st = status
+[merge]
+	tool = meld
